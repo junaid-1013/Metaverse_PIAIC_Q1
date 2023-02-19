@@ -1,0 +1,14 @@
+let placesToVisit = ["Makkah", "Madina","Karbala","Iran","Sham"];
+console.log("Array in Original Order "+placesToVisit);
+console.log("\nArray in Alphabetical Order "+placesToVisit.slice().sort());
+console.log("\nArray in Original Order "+placesToVisit);
+console.log("\nArray in reverse Alphabetical Order "+placesToVisit.slice().sort().reverse());
+console.log("\nArray in Original Order "+placesToVisit);
+placesToVisit.reverse();
+console.log("\nAfter reversing "+placesToVisit);
+placesToVisit.reverse();
+console.log("\nAfter reversing again "+placesToVisit);
+placesToVisit.sort();
+console.log("\nAfter sorting "+placesToVisit);
+placesToVisit.sort().reverse();
+console.log("\nAfter reversing sorting "+placesToVisit);
