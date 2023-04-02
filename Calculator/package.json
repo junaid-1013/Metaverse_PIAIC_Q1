@@ -1,6 +1,6 @@
 {
-  "name": "calculator",
-  "version": "1.0.0",
+  "name": "calculator-jb2",
+  "version": "1.0.5",
   "description": "",
   "main": "./app.js",
   "scripts": {
@@ -10,12 +10,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/chalk-animation": "^1.6.1",
+    "@types/figlet": "^1.5.5",
     "@types/inquirer": "^9.0.3",
     "@types/node": "^18.15.11"
+  },
+  "bin": {
+    "calculator_jb": "app.js"
   },
   "type": "module",
   "dependencies": {
     "chalk": "^5.2.0",
+    "chalk-animation": "^2.0.3",
+    "figlet": "^1.5.2",
     "inquirer": "^9.1.5"
   }
 }
