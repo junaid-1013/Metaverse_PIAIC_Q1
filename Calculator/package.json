@@ -1,6 +1,6 @@
 {
-  "name": "calculator-jb2",
-  "version": "1.0.5",
+  "name": "calculator_junaid",
+  "version": "1.0.1",
   "description": "",
   "main": "./app.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "@types/node": "^18.15.11"
   },
   "bin": {
-    "calculator_jb": "app.js"
+    "calculator_junaid": "app.js"
   },
   "type": "module",
   "dependencies": {

@@ -1,9 +1,9 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
 import figlet from "figlet";
 import { sum, sub, mul, div } from "./operations.js";
 const welCome = async () => {
-    
     console.log(figlet.textSync("Calculator"));
     let choice = {
         choice: 'Yes'
