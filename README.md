@@ -165,6 +165,20 @@ int main(int argc, char** argv) {
 
 ### ⚙️ SECTION 5: Advanced Topics
 
+🧠 Why Non-blocking Communication?
+
+In blocking communication (e.g., MPI_Send, MPI_Recv), a process waits until the communication completes before proceeding. This can lead to idle CPU time if the matching send/recv isn't ready.
+
+Non-blocking communication (MPI_Isend, MPI_Irecv) allows a process to initiate communication and continue working without waiting. This improves performance by overlapping computation and communication.
+
+Pros:
+
+Reduces CPU idle time
+
+Enables communication-computation overlap
+
+Improves performance in compute-heavy programs
+
 #### nonblocking\_send.c
 
 ```c
