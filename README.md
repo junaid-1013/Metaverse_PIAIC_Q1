@@ -239,5 +239,43 @@ mpi-course/
 ├── section4_advanced/
 │   └── nonblocking_send.c
 ```
+### 🧪 SECTION 7: Mini Projects
+
+#### 🧩 Game of Life (Parallelized with MPI)
+
+**Overview:**
+
+* Conway's Game of Life is a cellular automaton where cells evolve based on neighboring cells.
+* In MPI, we can divide the 2D grid among processes (each gets a horizontal slice).
+* Border rows must be exchanged between neighboring processes at each generation.
+
+**MPI Concepts Used:**
+
+* `MPI_Sendrecv` for boundary exchange
+* Collective synchronization with `MPI_Barrier`
+
+**Key Features:**
+
+* Dynamic grid update
+* Communication between neighbors
+* Use of ghost rows (top/bottom)
+
+**Code File:** `projects/game_of_life.c`
+
+**Compile & Run:**
+
+```bash
+mpicc game_of_life.c -o game_of_life
+mpirun -np 4 ./game_of_life 20 20 100
+```
+
+Where `20 20 100` are: rows, columns, generations
+
+**Assignment:**
+
+* Add functionality to output each generation to a file.
+* Implement periodic boundary conditions.
+* Measure execution time using `MPI_Wtime`.
+
 
 ---
