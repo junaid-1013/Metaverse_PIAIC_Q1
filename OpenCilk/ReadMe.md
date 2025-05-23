@@ -45,28 +45,16 @@ OpenCilk uses a work-stealing scheduler, which dynamically balances load across 
 
 ### Linux (Ubuntu/Debian)
 
+Goto this link: 
 ```bash
-sudo apt update
-sudo apt install cmake clang git
-git clone https://github.com/OpenCilk/opencilk-project.git
-cd opencilk-project
-./build.sh
+https://www.opencilk.org/doc/users-guide/install/#next-steps
 ```
-
-### macOS (Using Homebrew)
+and download the .sh file and run these commands
 
 ```bash
-brew install cmake llvm
-git clone https://github.com/OpenCilk/opencilk-project.git
-cd opencilk-project
-./build.sh
+mkdir -p /opt/opencilk
+sudo sh downloadedFile.sh --prefix=/opt/opencilk --exclude-subdi
 ```
-
-### Windows
-
-Use WSL (Windows Subsystem for Linux) and follow the Linux steps above.
-
----
 
 ## Practical Implementation
 
@@ -90,6 +78,13 @@ int main() {
     printf("Fibonacci result: %d\n", result);
     return 0;
 }
+```
+
+For Run:
+
+```bash
+/opt/opencilk/bin/clang -fopencilk -O3 fib.c -o fib
+./fib
 ```
 
 ### 2. Parallel Loop (Demonstrate `cilk_for`)
