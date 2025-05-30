@@ -48,7 +48,7 @@ You're now ready to write and run CUDA code with the `%%cu` magic cell!
 
 ### Week 2: First CUDA Program (Hello CUDA)
 ```cuda
-%%cu
+%%writefile test.cu
 #include <stdio.h>
 __global__ void hello() {
     printf("Hello from GPU thread!\n");
@@ -58,6 +58,13 @@ int main() {
     cudaDeviceSynchronize();
     return 0;
 }
+```
+
+and Run by using these commands
+
+```cuda
+!nvcc test.cu -o test
+!./test
 ```
 
 ### Week 3: Memory Management
